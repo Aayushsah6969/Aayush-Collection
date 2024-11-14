@@ -9,7 +9,7 @@ const AllUsers = () => {
   useEffect(() => {
     const GetUser = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/user/getusers', {
+        const response = await axios.get('https://aayush-collection-backend.onrender.com/user/getusers', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setUsers(response.data);
@@ -25,7 +25,7 @@ const AllUsers = () => {
     try {
       // API call to update user as admin
       const response = await axios.put(
-        `http://localhost:3000/user/updateuser/${id}`,
+        `https://aayush-collection-backend.onrender.com/user/updateuser/${id}`,
         { isAdmin: true },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -42,7 +42,7 @@ const AllUsers = () => {
   // Delete user
   const onDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/user/deleteuser/${id}`, {
+      const response = await axios.delete(`https://aayush-collection-backend.onrender.com/user/deleteuser/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert(response.data.message); // Show success message
