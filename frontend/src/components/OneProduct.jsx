@@ -21,7 +21,7 @@ const OneProduct = () => {
     useEffect(() => {
         const fetchBookData = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/products/getoneproduct/${id}`);
+                const response = await axios.get(`https://aayush-collection-backend.onrender.com/products/getoneproduct/${id}`);
                 console.log(response.data);
                 setBookData(response.data);
             } catch (error) {
@@ -73,7 +73,7 @@ const OneProduct = () => {
         };
 
         try {
-            const response = await axios.post('http://localhost:3000/order/placeorder', orderData);
+            const response = await axios.post('https://aayush-collection-backend.onrender.com/order/placeorder', orderData);
             alert(response.data.message);
             handleCloseModal();
         } catch (error) {
