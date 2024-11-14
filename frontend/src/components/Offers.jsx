@@ -9,7 +9,7 @@ const Offers = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/products/getproduct");
+        const response = await axios.get("https://aayush-collection-backend.onrender.com/products/getproduct");
         const discountedProducts = response.data.filter(product => product.discount > 40);
         setProducts(discountedProducts);
         setFilteredProducts(discountedProducts);
