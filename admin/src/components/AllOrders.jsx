@@ -13,7 +13,7 @@ const AllOrders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/order/allorders', {
+        const response = await axios.get('https://aayush-collection-backend.onrender.com/order/allorders', {
           headers: { Authorization: `Bearer ${token}` }
         });
         console.log(response.data);
@@ -34,7 +34,7 @@ const AllOrders = () => {
   const saveDeliveryStatus = async (order) => {
     try {
       await axios.put(
-        `http://localhost:3000/order/updateOrder/${order._id}`,
+        `https://aayush-collection-backend.onrender.com/order/updateOrder/${order._id}`,
         { deliveryStatus: deliveryStatus[order._id] || order.deliveryStatus },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -53,7 +53,7 @@ const AllOrders = () => {
     if (window.confirm('Are you sure you want to mark this order as paid?')) {
       try {
         await axios.put(
-          `http://localhost:3000/order/updateOrder/${order._id}`,
+          `https://aayush-collection-backend.onrender.com/order/updateOrder/${order._id}`,
           { paymentMethod: 'Paid' },
           {
             headers: { Authorization: `Bearer ${token}` },
