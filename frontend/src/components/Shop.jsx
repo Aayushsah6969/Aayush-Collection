@@ -13,7 +13,7 @@ const Shop = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/products/getproduct");
+        const response = await axios.get("https://aayush-collection-backend.onrender.com/products/getproduct");
         console.log(response.data);
         setProducts(response.data);
         setFilteredProducts(response.data); // Initialize filteredProducts
