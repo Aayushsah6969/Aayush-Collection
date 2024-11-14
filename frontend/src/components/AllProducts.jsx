@@ -10,7 +10,7 @@ const PaidBooks = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/book/getbook");
+        const response = await axios.get("https://aayush-collection-backend.onrender.com/book/getbook");
        // console.log(response.data); // For debugging
         setBooks(response.data); 
       } catch (error) {
