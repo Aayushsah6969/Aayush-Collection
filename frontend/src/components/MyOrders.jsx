@@ -10,7 +10,7 @@ const MyOrders = () => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/order/myorders', {
+                const response = await axios.get('https://aayush-collection-backend.onrender.com/order/myorders', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 console.log('Orders:', response.data); // Log orders for debugging
@@ -27,7 +27,7 @@ const MyOrders = () => {
     const cancelOrder = async (orderId) => {
         if (window.confirm('Are you sure you want to cancel this order?')) {
             try {
-                await axios.put(`http://localhost:3000/order/cancelorder/${orderId}`, {
+                await axios.put(`https://aayush-collection-backend.onrender.com/order/cancelorder/${orderId}`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setOrders(orders.filter(order => order._id !== orderId)); // Remove order from the list
