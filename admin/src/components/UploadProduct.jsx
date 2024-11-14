@@ -48,7 +48,7 @@ const UploadProduct = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://localhost:3000/products/uploadproduct', form, {
+      const response = await axios.post('https://aayush-collection-backend.onrender.com/products/uploadproduct', form, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data', // Ensure correct content type
