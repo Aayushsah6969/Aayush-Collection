@@ -18,7 +18,7 @@ const AllProducts = () => {
   useEffect(() => {
     const fetchproducts = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/products/getproduct');
+        const response = await axios.get('https://aayush-collection-backend.onrender.com/products/getproduct');
         setproducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -57,7 +57,7 @@ const AllProducts = () => {
     const token = localStorage.getItem('token');  // Assuming JWT is saved in localStorage
 
     try {
-      await axios.put(`http://localhost:3000/products/updateproduct/${currentproduct._id}`, formData,{
+      await axios.put(`https://aayush-collection-backend.onrender.com/products/updateproduct/${currentproduct._id}`, formData,{
         headers: { Authorization: `Bearer ${token}` }
       });
       setproducts(products.map((product) => (product._id === currentproduct._id ? { ...product, ...formData } : product)));
@@ -75,7 +75,7 @@ const AllProducts = () => {
 
     if (window.confirm('Are you sure you want to delete this product?')) {
       try {
-        await axios.delete(`http://localhost:3000/products/deleteproduct/${id}`,{
+        await axios.delete(`https://aayush-collection-backend.onrender.com/products/deleteproduct/${id}`,{
           headers: { Authorization: `Bearer ${token}` }
         });
         setproducts(products.filter((product) => product._id !== id));
