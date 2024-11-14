@@ -1,0 +1,28 @@
+Frontend Improvements:
+1. Navbar down in my orders page
+2. 2 items in shop page alongside
+3. Navbar icons' color managing with logoColor
+4. Appropriate Footer
+5. Appropriate contact page
+6. Make About Us page
+
+
+Replace all frontend(user+admin) allerts  with react-toastify
+
+
+verification email finding by: official email of the shop
+/backend/.env file: all details for official email of the shop
+COntact page, that third party service email by: official email of the shop
+
+
+
+***********PREMIUM FEATURES****************
+multiple images of a product in oneproduct page
+Size Guide in the Site
+uploading category -->  admin will upload categories. A SEPERATE TABLE IN DATABASE. While uploading products from admin, admin will chose from those upoaded categories.
+password reset system
+cart
+Company/brand based Clothes Arrangement
+newsletter- email the customers about new featured products
+customer reviews/stars
+{{{{{{ONLINE PAYMENT INTEGRATION}}}}}}
