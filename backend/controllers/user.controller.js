@@ -55,7 +55,7 @@ export const signup = async (req, res) => {
             }
         });
 
-        const verificationLink = `http://localhost:3000/user/verify-email?token=${verificationToken}`;
+        const verificationLink = `https://aayush-collection-backend.onrender.com/user/verify-email?token=${verificationToken}`;
 
         const mailOptions = {
             from: process.env.EMAIL_USER,
