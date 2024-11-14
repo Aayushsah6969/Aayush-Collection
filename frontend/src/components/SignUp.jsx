@@ -30,7 +30,7 @@ const SignUp = () => {
     setSuccess(false);
 
     try {
-      const response = await axios.post('http://localhost:3000/user/signup', formData);
+      const response = await axios.post('https://aayush-collection-backend.onrender.com/user/signup', formData);
       console.log(response.data); // For debugging
       setSuccess(true); // Show success message if request succeeds
     
