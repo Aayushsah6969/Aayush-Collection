@@ -8,7 +8,7 @@ const FeaturedProducts = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/products/getproduct");
+        const response = await axios.get("https://aayush-collection-backend.onrender.com/products/getproduct");
         console.log(response.data);
 
         // Filter products where isFeatured is true
