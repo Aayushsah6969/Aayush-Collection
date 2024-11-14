@@ -15,8 +15,8 @@ const Home = () => {
   useEffect(() => {
     const fetchCounts = async () => {
       try {
-        const productResponse = await axios.get('http://localhost:3000/products/getproduct');
-        const userResponse = await axios.get('http://localhost:3000/user/getusers', {
+        const productResponse = await axios.get('https://aayush-collection-backend.onrender.com/products/getproduct');
+        const userResponse = await axios.get('https://aayush-collection-backend.onrender.com/user/getusers', {
           headers: { Authorization: `Bearer ${token}` }});
 
         // Set the counts in the state
