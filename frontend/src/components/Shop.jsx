@@ -14,6 +14,7 @@ const Shop = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get("https://aayush-collection-backend.onrender.com/products/getproduct");
+        console.log(response);
         console.log(response.data);
         setProducts(response.data);
         setFilteredProducts(response.data); // Initialize filteredProducts
